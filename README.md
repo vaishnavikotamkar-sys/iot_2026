@@ -1,18 +1,20 @@
-# 🧠 Artificial Neural Network (ANN) Based Prediction Model
+# 🏠 House Price Prediction Using Linear Regression
 
-> A Machine Learning project developed using an Artificial Neural Network (ANN) to perform predictive analysis on structured data.
+A Machine Learning project developed using **Linear Regression** to predict house prices based on various house features such as bedrooms, bathrooms, square footage, floors, condition, and location-related attributes.
+
+The project demonstrates the complete machine learning workflow, including data preprocessing, exploratory data analysis (EDA), feature selection, model training, prediction, and performance evaluation using Python and Scikit-learn.
 
 ---
 
 # 👨‍💻 Developer Information
 
-**Student Name:** YOUR NAME
+**Student Name:** Tanushree Kotamkar
 
-**Roll Number:** YOUR ROLL NUMBER
+**Roll Number:** 119
 
-**College:** YOUR COLLEGE NAME
+**College:** Priyadarshani  College Of Engineering,Nagpur
 
-**Department:** Computer Engineering / Information Technology
+**Department:** Industrial Internet Of Things
 
 **Academic Year:** 2025–2026
 
@@ -20,36 +22,34 @@
 
 # 📌 Project Overview
 
-This project demonstrates the implementation of an Artificial Neural Network (ANN) using Python and Jupyter Notebook. The primary objective is to build a predictive machine learning model capable of learning patterns from the provided dataset and producing accurate predictions.
+This project demonstrates the implementation of a **Linear Regression** model using Python and Jupyter Notebook. The primary objective is to predict house prices based on various housing features such as bedrooms, bathrooms, square footage, floors, and other property characteristics.
 
-The project follows the complete machine learning pipeline, including data preprocessing, feature engineering, model building, training, evaluation, and prediction.
+The project follows a complete machine learning workflow, including data loading, data preprocessing, exploratory data analysis (EDA), feature selection, model training, prediction, and performance evaluation.
 
-The implementation is intended for educational purposes and demonstrates how deep learning techniques can solve real-world prediction problems using structured datasets.
+This project is developed for educational purposes and provides a practical understanding of how Linear Regression can be applied to solve real-world house price prediction problems using structured datasets.
 
 ---
 
 # 🎯 Project Objectives
 
-- Understand Artificial Neural Networks.
-- Implement an ANN using Python.
-- Perform data preprocessing.
-- Train a neural network model.
-- Evaluate model performance.
-- Generate predictions using trained data.
+- Understand the fundamentals of Linear Regression.
+- Implement a Linear Regression model using Python.
+- Perform data preprocessing and data cleaning.
+- Explore the dataset using Exploratory Data Analysis (EDA).
+- Train the machine learning model on housing data.
+- Evaluate the model using performance metrics.
+- Predict house prices using the trained model.
 - Demonstrate an end-to-end machine learning workflow.
-
 ---
-
 # 🛠 Technologies Used
 
 - Python
 - Jupyter Notebook
 - NumPy
 - Pandas
-- TensorFlow / Keras
 - Matplotlib
+- Seaborn
 - Scikit-learn
-
 ---
 
 # 🏗 Project Architecture
@@ -71,12 +71,28 @@ The implementation is intended for educational purposes and demonstrates how dee
                    │
                    ▼
      Artificial Neural Network
-     ┌─────────────────────────┐
-     │ Input Layer             │
-     │ Hidden Layer(s)         │
-     │ Activation Functions    │
-     │ Output Layer            │
-     └─────────────────────────┘
+     # 🏗 Project Architecture
+
+```text
+                Dataset
+                   │
+                   ▼
+           Data Collection
+                   │
+                   ▼
+         Data Preprocessing
+                   │
+                   ▼
+      Exploratory Data Analysis (EDA)
+                   │
+                   ▼
+          Feature Selection
+                   │
+                   ▼
+          Train/Test Split
+                   │
+                   ▼
+        Linear Regression Model
                    │
                    ▼
            Model Training
@@ -85,7 +101,8 @@ The implementation is intended for educational purposes and demonstrates how dee
           Model Evaluation
                    │
                    ▼
-            Final Prediction
+            Prediction
+```
 ```
 
 ---
@@ -94,156 +111,152 @@ The implementation is intended for educational purposes and demonstrates how dee
 
 ### Step 1 – Data Collection
 
-The dataset is loaded into the notebook for further processing.
+The house price dataset is loaded into the Jupyter Notebook for analysis.
 
 ↓
 
 ### Step 2 – Data Cleaning
 
-- Remove missing values
-- Handle inconsistent records
-- Prepare clean data
+- Check missing values
+- Remove duplicate records
+- Remove unnecessary columns
 
 ↓
 
-### Step 3 – Data Preprocessing
+### Step 3 – Exploratory Data Analysis (EDA)
 
-- Encoding categorical values
-- Feature scaling
-- Data normalization
+- Analyze dataset information
+- Generate histograms
+- Create a correlation heatmap
+- Understand feature relationships
 
 ↓
 
 ### Step 4 – Feature Selection
 
-Important input variables are selected for training.
+The input features and target variable (**price**) are selected for model development.
 
 ↓
 
 ### Step 5 – Dataset Splitting
 
-The dataset is divided into
+The dataset is divided into:
 
 - Training Dataset
 - Testing Dataset
 
 ↓
 
-### Step 6 – ANN Model Creation
+### Step 6 – Model Building
 
-The neural network consists of
-
-- Input Layer
-- Hidden Layer(s)
-- Output Layer
-
-Activation functions are applied to improve learning capability.
+A Machine Learning model is trained using the housing dataset to learn the relationship between house features and house prices.
 
 ↓
 
-### Step 7 – Model Training
+### Step 7 – Model Evaluation
 
-The ANN learns hidden relationships between features by adjusting weights using backpropagation.
+The model performance is evaluated using:
 
-↓
-
-### Step 8 – Model Evaluation
-
-Performance is evaluated using prediction accuracy and other evaluation metrics.
+- R² Score
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
 
 ↓
 
-### Step 9 – Prediction
+### Step 8 – Prediction
 
-The trained model predicts outcomes for unseen data.
-
+The trained model predicts house prices for unseen data.
 ---
 
 # 📂 Project Structure
 
-```
-Project
+```text
+House-Price-Prediction/
 │
-├── Binary_example.ipynb
 ├── README.md
-├── dataset/
-├── outputs/
-├── models/
-└── requirements.txt
+├── HousePrice.ipynb
+├── kc_house_data.csv
+├── requirements.txt
+├── images/
+│   ├── histogram.png
+│   ├── heatmap.png
+│   └── actual_vs_predicted.png
+└── .gitignore
+```
 ```
 
 ---
+# 🏗 Model Architecture
 
-# 🧠 ANN Architecture
-
-```
-             Input Features
-                    │
-                    ▼
-          Dense Input Layer
-                    │
-                    ▼
-         Hidden Layer (ReLU)
-                    │
-                    ▼
-         Hidden Layer (ReLU)
-                    │
-                    ▼
-          Output Layer
-                    │
-                    ▼
-              Prediction
+```text
+          House Price Dataset
+                   │
+                   ▼
+         Input Features (X)
+ (Bedrooms, Bathrooms, Sqft, Floors,
+  Condition, Grade, etc.)
+                   │
+                   ▼
+      Data Preprocessing & Cleaning
+                   │
+                   ▼
+         Train-Test Split
+                   │
+                   ▼
+      Linear Regression Model
+                   │
+                   ▼
+          House Price Prediction
 ```
 
 ---
-
 # ⚙ Key Features
 
-- Data preprocessing
-- Artificial Neural Network implementation
-- Model training
-- Prediction
-- Performance evaluation
-- Data visualization
-- Machine Learning workflow
+- House price prediction using Machine Learning
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- Correlation analysis using Heatmap
+- Data visualization using Matplotlib and Seaborn
+- Model training and prediction
+- Model evaluation using R² Score, MAE, and MSE
+- End-to-end Machine Learning workflow
 
 ---
-
 # 💡 Key Skills Demonstrated
 
 - Python Programming
 - Machine Learning
-- Deep Learning
-- Artificial Neural Networks
-- TensorFlow/Keras
 - Data Analysis
-- Feature Engineering
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Selection
 - Data Visualization
+- Model Training
 - Model Evaluation
+- House Price Prediction
 - Problem Solving
 
 ---
 
 # 📊 Expected Outputs
 
-- Cleaned dataset
-- Trained ANN model
-- Prediction results
-- Performance evaluation
-- Graphical analysis
-- Accuracy metrics
+- Cleaned and preprocessed housing dataset
+- Exploratory Data Analysis (EDA) visualizations
+- Correlation heatmap
+- Trained House Price Prediction model
+- House price prediction results
+- Model evaluation using R² Score, MAE, and MSE
+- Actual vs Predicted Price visualization
 
 ---
 
 # 📈 Future Improvements
 
-- Hyperparameter tuning
-- Larger dataset
-- Better feature engineering
-- Improved accuracy
-- Model deployment using Flask/FastAPI
-- Cloud deployment
-
+- Use a larger housing dataset
+- Improve feature selection
+- Compare different machine learning algorithms
+- Increase prediction accuracy
+- Deploy the model as a web application
 ---
 
 # 📚 Learning Outcomes
@@ -251,21 +264,23 @@ Project
 Through this project, the following concepts were explored:
 
 - Machine Learning fundamentals
-- Artificial Neural Networks
-- Data preprocessing
-- Model optimization
-- Deep learning workflow
-- Performance evaluation
-
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Selection
+- Data Visualization
+- Train-Test Split
+- House Price Prediction
+- Model Evaluation using R² Score, MAE, and MSE
 ---
 
 # 📖 References
 
-- TensorFlow Documentation
-- Keras Documentation
 - Scikit-learn Documentation
-- NumPy Documentation
 - Pandas Documentation
+- NumPy Documentation
+- Matplotlib Documentation
+- Seaborn Documentation
+- Jupyter Notebook Documentation
 
 ---
 
