@@ -1,18 +1,17 @@
-# 🧠 Artificial Neural Network (ANN) Based Prediction Model
+# 🛍 Customer Segmentation Using K-Means Clustering
 
-> A Machine Learning project developed using an Artificial Neural Network (ANN) to perform predictive analysis on structured data.
-
+> A Machine Learning project developed using the K-Means Clustering algorithm to segment customers into different groups based on their annual income and spending behavior.
 ---
 
 # 👨‍💻 Developer Information
 
-**Student Name:** YOUR NAME
+**Student Name:** Tanushree Kotamkar
 
-**Roll Number:** YOUR ROLL NUMBER
+**Roll Number:** 119
 
-**College:** YOUR COLLEGE NAME
+**College:** Priyadarshani College Of Engineering, Nagpur
 
-**Department:** Computer Engineering / Information Technology
+**Department:** Industrial Internet Of Things
 
 **Academic Year:** 2025–2026
 
@@ -20,23 +19,23 @@
 
 # 📌 Project Overview
 
-This project demonstrates the implementation of an Artificial Neural Network (ANN) using Python and Jupyter Notebook. The primary objective is to build a predictive machine learning model capable of learning patterns from the provided dataset and producing accurate predictions.
+This project demonstrates the implementation of the K-Means Clustering algorithm using Python and Jupyter Notebook. The primary objective is to segment customers into distinct groups based on their annual income and spending behavior.
 
-The project follows the complete machine learning pipeline, including data preprocessing, feature engineering, model building, training, evaluation, and prediction.
+The project follows the complete machine learning pipeline, including data loading, data preprocessing, exploratory data analysis (EDA), feature selection, cluster formation, visualization, and cluster analysis.
 
-The implementation is intended for educational purposes and demonstrates how deep learning techniques can solve real-world prediction problems using structured datasets.
-
+The implementation is intended for educational purposes and demonstrates how unsupervised machine learning techniques can discover hidden patterns and customer segments from structured datasets without using predefined target labels.
 ---
 
 # 🎯 Project Objectives
 
-- Understand Artificial Neural Networks.
-- Implement an ANN using Python.
-- Perform data preprocessing.
-- Train a neural network model.
-- Evaluate model performance.
-- Generate predictions using trained data.
-- Demonstrate an end-to-end machine learning workflow.
+- Understand the K-Means Clustering algorithm.
+- Implement K-Means Clustering using Python.
+- Perform data preprocessing and exploratory data analysis (EDA).
+- Identify the optimal number of clusters using the Elbow Method.
+- Segment customers based on annual income and spending score.
+- Visualize customer clusters using scatter plots.
+- Analyze customer behavior and characteristics within each cluster.
+- Demonstrate an end-to-end unsupervised machine learning workflow.
 
 ---
 
@@ -46,166 +45,183 @@ The implementation is intended for educational purposes and demonstrates how dee
 - Jupyter Notebook
 - NumPy
 - Pandas
-- TensorFlow / Keras
 - Matplotlib
+- Seaborn
 - Scikit-learn
-
+- Joblib
 ---
 
-# 🏗 Project Architecture
+
+    # 🏗 Project Architecture
 
 ```
                 Dataset
                    │
                    ▼
-        Data Collection
+          Data Collection
                    │
                    ▼
         Data Preprocessing
                    │
                    ▼
-        Feature Engineering
+        Exploratory Data Analysis
                    │
                    ▼
-          Train/Test Split
+          Feature Selection
                    │
                    ▼
-     Artificial Neural Network
-     ┌─────────────────────────┐
-     │ Input Layer             │
-     │ Hidden Layer(s)         │
-     │ Activation Functions    │
-     │ Output Layer            │
-     └─────────────────────────┘
+            Elbow Method
                    │
                    ▼
-           Model Training
+        K-Means Clustering
+        ┌──────────────────────┐
+        │ Cluster Initialization │
+        │ Distance Calculation   │
+        │ Cluster Assignment     │
+        │ Centroid Update        │
+        └──────────────────────┘
                    │
                    ▼
-          Model Evaluation
+         Cluster Visualization
                    │
                    ▼
-            Final Prediction
+          Cluster Analysis
+                   │
+                   ▼
+      Customer Segmentation
 ```
 
 ---
-
 # 🔄 Project Workflow
 
 ### Step 1 – Data Collection
 
-The dataset is loaded into the notebook for further processing.
+The Mall Customers dataset is loaded into the notebook for analysis.
 
 ↓
 
 ### Step 2 – Data Cleaning
 
-- Remove missing values
-- Handle inconsistent records
-- Prepare clean data
+- Check missing values
+- Check duplicate records
+- Prepare a clean dataset
 
 ↓
 
 ### Step 3 – Data Preprocessing
 
-- Encoding categorical values
-- Feature scaling
-- Data normalization
+- Select relevant features
+- Handle categorical and numerical data
+- Prepare data for clustering
 
 ↓
 
-### Step 4 – Feature Selection
+### Step 4 – Exploratory Data Analysis (EDA)
 
-Important input variables are selected for training.
-
-↓
-
-### Step 5 – Dataset Splitting
-
-The dataset is divided into
-
-- Training Dataset
-- Testing Dataset
+- Analyze customer demographics
+- Visualize data using histograms and count plots
+- Generate a correlation heatmap
 
 ↓
 
-### Step 6 – ANN Model Creation
+### Step 5 – Feature Selection
 
-The neural network consists of
+The following features are selected for clustering:
 
-- Input Layer
-- Hidden Layer(s)
-- Output Layer
-
-Activation functions are applied to improve learning capability.
+- Annual Income (k$)
+- Spending Score (1–100)
 
 ↓
 
-### Step 7 – Model Training
+### Step 6 – Finding the Optimal Number of Clusters
 
-The ANN learns hidden relationships between features by adjusting weights using backpropagation.
-
-↓
-
-### Step 8 – Model Evaluation
-
-Performance is evaluated using prediction accuracy and other evaluation metrics.
+The Elbow Method is used to determine the optimal number of clusters.
 
 ↓
 
-### Step 9 – Prediction
+### Step 7 – K-Means Clustering
 
-The trained model predicts outcomes for unseen data.
+The K-Means algorithm groups customers into different clusters based on similar characteristics.
 
+↓
+
+### Step 8 – Cluster Visualization
+
+Customer clusters are visualized using scatter plots, and cluster centers are identified.
+
+↓
+
+### Step 9 – Cluster Analysis
+
+Each customer segment is analyzed to understand spending behavior and income patterns.
 ---
 
 # 📂 Project Structure
 
 ```
-Project
+Customer-Segmentation-KMeans/
 │
-├── Binary_example.ipynb
+├── Customer_Segmentation_KMeans.ipynb
+├── Mall_Customers.csv
+├── customer_segmentation_kmeans.pkl
 ├── README.md
-├── dataset/
 ├── outputs/
-├── models/
+│   ├── histogram.png
+│   ├── countplot.png
+│   ├── heatmap.png
+│   ├── elbow_method.png
+│   └── cluster_visualization.png
 └── requirements.txt
 ```
-
----
-
-# 🧠 ANN Architecture
-
-```
-             Input Features
-                    │
-                    ▼
-          Dense Input Layer
-                    │
-                    ▼
-         Hidden Layer (ReLU)
-                    │
-                    ▼
-         Hidden Layer (ReLU)
-                    │
-                    ▼
-          Output Layer
-                    │
-                    ▼
-              Prediction
 ```
 
 ---
 
+# 🛍 K-Means Clustering Architecture
+
+```
+          Customer Dataset
+                 │
+                 ▼
+        Input Features
+ (Annual Income, Spending Score)
+                 │
+                 ▼
+        Feature Selection
+                 │
+                 ▼
+         Elbow Method
+ (Find Optimal Number of Clusters)
+                 │
+                 ▼
+      K-Means Clustering Algorithm
+                 │
+        ┌────────┴────────┐
+        ▼                 ▼
+  Cluster Assignment   Centroid Update
+        │                 │
+        └────────┬────────┘
+                 ▼
+        Customer Segments
+                 │
+                 ▼
+      Cluster Visualization
+```
+
+---
 # ⚙ Key Features
 
 - Data preprocessing
-- Artificial Neural Network implementation
-- Model training
-- Prediction
-- Performance evaluation
-- Data visualization
-- Machine Learning workflow
+- Exploratory Data Analysis (EDA)
+- Customer data visualization
+- Feature selection for clustering
+- Elbow Method to determine the optimal number of clusters
+- K-Means Clustering implementation
+- Customer segmentation based on income and spending score
+- Cluster visualization using scatter plots
+- Cluster center analysis
+- Model saving using Joblib
+- Complete Unsupervised Machine Learning workflow
 
 ---
 
@@ -213,37 +229,41 @@ Project
 
 - Python Programming
 - Machine Learning
-- Deep Learning
-- Artificial Neural Networks
-- TensorFlow/Keras
-- Data Analysis
-- Feature Engineering
+- Unsupervised Learning
+- K-Means Clustering
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Selection
+- Customer Segmentation
 - Data Visualization
-- Model Evaluation
+- Cluster Analysis
+- Model Saving with Joblib
 - Problem Solving
 
 ---
 
 # 📊 Expected Outputs
 
-- Cleaned dataset
-- Trained ANN model
-- Prediction results
-- Performance evaluation
-- Graphical analysis
-- Accuracy metrics
+- Cleaned and preprocessed dataset
+- Exploratory Data Analysis (EDA) visualizations
+- Elbow Method graph for optimal cluster selection
+- Customer segmentation using K-Means Clustering
+- Cluster visualization with scatter plots
+- Cluster centroids and customer group analysis
+- Saved K-Means model (`customer_segmentation_kmeans.pkl`)
+- Insights into customer purchasing behavior
 
 ---
 
 # 📈 Future Improvements
 
-- Hyperparameter tuning
-- Larger dataset
-- Better feature engineering
-- Improved accuracy
-- Model deployment using Flask/FastAPI
-- Cloud deployment
-
+- Optimize the number of clusters using advanced evaluation techniques
+- Apply feature scaling for improved clustering performance
+- Use larger and more diverse customer datasets
+- Compare K-Means with other clustering algorithms such as Hierarchical Clustering and DBSCAN
+- Build an interactive customer segmentation dashboard
+- Deploy the clustering model using Flask or FastAPI
+- Integrate the project into a web application for real-time customer segmentation
 ---
 
 # 📚 Learning Outcomes
@@ -258,14 +278,20 @@ Through this project, the following concepts were explored:
 - Performance evaluation
 
 ---
+# 📚 Learning Outcomes
 
-# 📖 References
+Through this project, the following concepts were explored:
 
-- TensorFlow Documentation
-- Keras Documentation
-- Scikit-learn Documentation
-- NumPy Documentation
-- Pandas Documentation
+- Machine Learning fundamentals
+- Unsupervised Learning
+- K-Means Clustering algorithm
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature selection for clustering
+- Customer segmentation techniques
+- Cluster visualization and interpretation
+- Model saving using Joblib
+- Complete Unsupervised Machine Learning workflow
 
 ---
 
@@ -277,8 +303,7 @@ This project is created for academic and educational purposes.
 
 # 🙏 Acknowledgement
 
-I sincerely thank my faculty members, department, and college for providing guidance and support throughout the development of this project. This work helped me gain practical knowledge of Artificial Neural Networks and Machine Learning.
-
+I sincerely thank my faculty members, department, and college for their continuous guidance and support throughout the development of this project. This work provided me with practical knowledge of K-Means Clustering, Unsupervised Machine Learning, Data Preprocessing, Exploratory Data Analysis (EDA), and Customer Segmentation techniques. It also enhanced my understanding of applying machine learning algorithms to solve real-world business problems.
 ---
 
 ⭐ If you found this project useful, consider giving it a star on GitHub.
